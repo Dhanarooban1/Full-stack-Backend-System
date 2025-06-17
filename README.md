@@ -328,15 +328,11 @@ If you encounter an error like "Error in uploadImage: Python script failed", fol
 
 ### 1. Upload Image and Extract Pose
 
-![Upload Image API](path/to/upload-image-screenshot.png)
-
 *Description: POST request to `/api/pose/upload` with image file uploaded through form-data*
 
 ![image](https://github.com/user-attachments/assets/dd7c0af3-7d55-452e-b566-8ba8fde86822)
 
 ### 2. Get Pose Data by ID
-
-![Get Pose API](path/to/get-pose-screenshot.png)
 
 *Description: GET request to `/api/pose/:id` showing the extracted keypoints*
 
@@ -344,21 +340,15 @@ If you encounter an error like "Error in uploadImage: Python script failed", fol
 
 ### 3. Get All Pose Data with Pagination
 
-![Get All Poses API](path/to/get-all-poses-screenshot.png)
-
 *Description: GET request to `/api/pose?page=1&limit=10` showing paginated results*
 
 ![alt text](image-1.png)
 
 ### 4. Download Backup File
 
-![Download Backup API](path/to/download-backup-screenshot.png)
-
 *Description: GET request to `/api/pose/backup/:filename` initiating a backup file download*
 [text](<../../../../../Downloads/backup-2025-06-17 (1).zip>)
 ### 5. Successful Backup Email Notification
-
-![Email Notification](path/to/email-notification-screenshot.png)
 
 *Description: Screenshot of the email received after a successful backup*
 ![alt text](<Screenshot 2025-06-17 190355.png>)
