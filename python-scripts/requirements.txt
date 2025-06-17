@@ -1,5 +1,5 @@
 flask
-mediapipe>=0.10.21
+mediapipe
 opencv-python
 numpy
 Pillow
