@@ -1,0 +1,32 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Keypoint {
+  id        String   @id @default(cuid())
+  imageId   String   @unique
+  keypoints Json
+  landmarks Json?
+  visibility Json?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("keypoints")
+}
+
+model ProcessingLog {
+  id          String   @id @default(cuid())
+  imageId     String
+  status      String
+  error       String?
+  processingTime Int?
+  createdAt   DateTime @default(now())
+
+  @@map("processing_logs")
+}
