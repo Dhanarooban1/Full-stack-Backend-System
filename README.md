@@ -2,6 +2,11 @@
 
 A complete backend system that extracts keypoints from images using MediaPipe, stores data in SQL and NoSQL databases, and provides a comprehensive REST API for data management.
 
+
+## Live Demo
+
+The API is deployed and available at: [https://full-stack-backend-system.onrender.com](https://full-stack-backend-system.onrender.com)
+
 ## Features
 
 - Image upload and processing with MediaPipe Pose
@@ -327,11 +332,15 @@ If you encounter an error like "Error in uploadImage: Python script failed", fol
 
 *Description: POST request to `/api/pose/upload` with image file uploaded through form-data*
 
+![image](https://github.com/user-attachments/assets/dd7c0af3-7d55-452e-b566-8ba8fde86822)
+
 ### 2. Get Pose Data by ID
 
 ![Get Pose API](path/to/get-pose-screenshot.png)
 
 *Description: GET request to `/api/pose/:id` showing the extracted keypoints*
+
+![alt text](image.png)
 
 ### 3. Get All Pose Data with Pagination
 
@@ -339,17 +348,21 @@ If you encounter an error like "Error in uploadImage: Python script failed", fol
 
 *Description: GET request to `/api/pose?page=1&limit=10` showing paginated results*
 
+![alt text](image-1.png)
+
 ### 4. Download Backup File
 
 ![Download Backup API](path/to/download-backup-screenshot.png)
 
 *Description: GET request to `/api/pose/backup/:filename` initiating a backup file download*
-
+[text](<../../../../../Downloads/backup-2025-06-17 (1).zip>)
 ### 5. Successful Backup Email Notification
 
 ![Email Notification](path/to/email-notification-screenshot.png)
 
 *Description: Screenshot of the email received after a successful backup*
+![alt text](<Screenshot 2025-06-17 190355.png>)
+![alt text](<Screenshot 2025-06-17 190148.png>)
 
 ## License
 
