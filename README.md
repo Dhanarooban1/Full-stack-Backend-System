@@ -348,6 +348,7 @@ If you encounter an error like "Error in uploadImage: Python script failed", fol
 
 *Description: GET request to `/api/pose/backup/:filename` initiating a backup file download*
 [text](<../../../../../Downloads/backup-2025-06-17 (1).zip>)
+
 ### 5. Successful Backup Email Notification
 
 *Description: Screenshot of the email received after a successful backup*
