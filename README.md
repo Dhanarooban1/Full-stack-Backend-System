@@ -61,17 +61,12 @@ If you encounter network issues when installing packages, you can try these alte
      - numpy
    - Install them with: `pip install path\to\wheelfile.whl`
 
-2. **Use Anaconda/Miniconda** (if installed):
-   ```bash
-   conda install -c conda-forge opencv mediapipe numpy pillow
-   ```
-
-3. **Verify installation**:
+2. **Verify installation**:
    ```bash
    python -c "import cv2; import mediapipe; import numpy; print('Success!')"
    ```
 
-4. Set up environment variables:
+3. Set up environment variables:
    Create a `.env` file in the root directory with the following variables:
    ```
    # Server Configuration
@@ -94,15 +89,47 @@ If you encounter network issues when installing packages, you can try these alte
    BACKUP_DIR=./backups
    ```
 
-5. Initialize the database:
+4. Initialize the database:
    ```bash
    npx prisma db push
    ```
 
-6. Start the server:
+5. Start the server:
    ```bash
    npm start
    ```
+
+## Screenshots of Postman Results
+
+### 1. Upload Image and Extract Pose
+
+*Description: POST request to `/api/pose/upload` with image file uploaded through form-data*
+
+![image](https://github.com/user-attachments/assets/dd7c0af3-7d55-452e-b566-8ba8fde86822)
+
+### 2. Get Pose Data by ID
+
+*Description: GET request to `/api/pose/:id` showing the extracted keypoints*
+
+![alt text](image.png)
+
+### 3. Get All Pose Data with Pagination
+
+*Description: GET request to `/api/pose?page=1&limit=10` showing paginated results*
+
+![alt text](image-1.png)
+
+### 4. Download Backup File
+
+*Description: GET request to `/api/pose/backup/:filename` initiating a backup file download*
+
+- **Direct Link:** [ZipFile.zip](./ZipFile.zip)
+
+### 5. Successful Backup Email Notification
+
+*Description: Screenshot of the email received after a successful backup*
+![alt text](<Screenshot 2025-06-17 190355.png>)
+![alt text](<Screenshot 2025-06-17 190148.png>)
 
 ## API Usage
 
@@ -308,11 +335,7 @@ If you encounter an error like "Error in uploadImage: Python script failed", fol
    python -c "import cv2; import mediapipe; import numpy; from PIL import Image; print('All dependencies successfully installed!')"
    ```
 
-3. If you encounter network issues during installation, try these alternatives:
-   - Download wheel files from: https://www.lfd.uci.edu/~gohlke/pythonlibs/
-   - If using Anaconda/Miniconda: `conda install -c conda-forge opencv mediapipe numpy pillow`
-
-4. If the problem persists, check the logs for specific error messages:
+3. If the problem persists, check the logs for specific error messages:
    ```bash
    cat logs/error.log
    ```
@@ -324,37 +347,6 @@ If you encounter an error like "Error in uploadImage: Python script failed", fol
 - **ImportError: DLL load failed** - Missing Visual C++ Redistributable on Windows
   (Download from: https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist)
 
-## Screenshots of Postman Results
-
-### 1. Upload Image and Extract Pose
-
-*Description: POST request to `/api/pose/upload` with image file uploaded through form-data*
-
-![image](https://github.com/user-attachments/assets/dd7c0af3-7d55-452e-b566-8ba8fde86822)
-
-### 2. Get Pose Data by ID
-
-*Description: GET request to `/api/pose/:id` showing the extracted keypoints*
-
-![alt text](image.png)
-
-### 3. Get All Pose Data with Pagination
-
-*Description: GET request to `/api/pose?page=1&limit=10` showing paginated results*
-
-![alt text](image-1.png)
-
-### 4. Download Backup File
-
-*Description: GET request to `/api/pose/backup/:filename` initiating a backup file download*
-
-- **Direct Link:** [ZipFile.zip](./ZipFile.zip)
-
-### 5. Successful Backup Email Notification
-
-*Description: Screenshot of the email received after a successful backup*
-![alt text](<Screenshot 2025-06-17 190355.png>)
-![alt text](<Screenshot 2025-06-17 190148.png>)
 
 ## License
 
